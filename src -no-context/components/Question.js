@@ -1,9 +1,6 @@
-import { useQuiz } from "../QuizContext";
-
-function Question() {
-  const { questions, index, dispatch, answer } = useQuiz();
+function Question({ question, dispatch, answer }) {
   const hasAnswered = answer !== null;
-  const question = questions[index];
+
   return (
     <div>
       <h4>{question.question}</h4>
